@@ -14,7 +14,7 @@ def mpris_get_metadata_field(field):
 def google_spotify_url(query):
     search_results = googlesearch.search("spotify " + query, num_results=10)
     for result in search_results:
-        if result.find("open.spotify.com/track") != -1:
+        if result.find("open.spotify.com") != -1 and result.find("/track") != -1:
             return result
     return None
 
